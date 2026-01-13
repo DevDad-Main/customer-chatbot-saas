@@ -11,10 +11,43 @@ const Navbar = () => {
             <div className="w-2.5 h-2.5 bg-black rounded[1px]"></div>
           </div>
 
-          <span className="text-sm font-medium tracking-tight text-white/90">
+          <span className="text-lg font-semibold tracking-tight text-white/90">
             ServIQ
           </span>
         </Link>
+
+        <div className="hidden md:flex items-center gap-8 text-sm font-light text-zinc-400">
+          <Link href="#features" className="hover:text-white transition-colors">
+            Features
+          </Link>
+
+          <Link
+            href="#how-it-works"
+            className="hover:text-white transition-colors"
+          >
+            Integration
+          </Link>
+
+          <Link href="#pricing" className="hover:text-white transition-colors">
+            Pricing
+          </Link>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <Link
+            href="/api/auth"
+            className="text-xs font-medium text-zinc-400 hover:text-white transition-colors"
+          >
+            Sign In
+          </Link>
+
+          <Link
+            href="/api/auth"
+            className="text-xs font-medium bg-white text-black px-4 py-2 rounded-full hover:bg-zinc-200 transition-colors"
+          >
+            Get Started
+          </Link>
+        </div>
       </div>
     </nav>
   );
