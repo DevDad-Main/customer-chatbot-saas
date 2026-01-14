@@ -1,6 +1,7 @@
 import Hero from "@/components/ui/landing/hero";
 import Navbar from "@/components/ui/landing/nav";
 import SocialProof from "@/components/ui/landing/social";
+import Features from "@/components/ui/landing/features";
 import React from "react";
 
 const Page = () => {
@@ -9,6 +10,7 @@ const Page = () => {
       <Navbar />
       <Hero />
       <SocialProof />
+      <Features />
     </main>
   );
 };
