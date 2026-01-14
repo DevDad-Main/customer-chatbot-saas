@@ -5,6 +5,7 @@ import Features from "@/components/ui/landing/features";
 import React from "react";
 import Integration from "@/components/ui/landing/integration";
 import Pricing from "@/components/ui/landing/pricing";
+import Footer from "@/components/ui/landing/footer";
 
 const Page = () => {
   return (
@@ -15,6 +16,7 @@ const Page = () => {
       <Features />
       <Integration />
       <Pricing />
+      <Footer />
     </main>
   );
 };
