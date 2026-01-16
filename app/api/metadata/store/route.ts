@@ -1,8 +1,7 @@
-import { db } from "@/db/client";
+import { prisma } from "@/db/client";
 import { isUserAuthorized } from "@/lib/isAuthorized";
 import { logger } from "devdad-express-utils";
 import { NextRequest, NextResponse } from "next/server";
-import { metadata } from "@/db/schema";
 import { cookies } from "next/headers";
 
 export async function POST(req: NextRequest) {
@@ -29,11 +28,13 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const metadataResponse = await db.insert(metadata).values({
-    user_email: user.email,
-    business_name,
-    website_url,
-    external_links,
+  const metadataResponse = await prisma.metadata.create({
+    data: {
+      userEmail: user.email,
+      businessName: business_name,
+      websiteUrl: website_url,
+      externalLinks: external_links,
+    },
   });
 
   (await cookies()).set("metadata", JSON.stringify({ business_name }));

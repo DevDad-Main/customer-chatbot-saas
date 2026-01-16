@@ -13,6 +13,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
 import { Input } from "../ui/input";
+import { formatDate } from "date-fns";
 
 interface InitialData {
   businessName: string;
@@ -128,6 +129,22 @@ const InitialForm = () => {
   const handleSubmit = async () => {
     // TODO: Flesh out the rest of the component first
     setIsSubmitting(true);
+
+    const response = await fetch("/api/metadata/store", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        business_name: formData.businessName,
+        website_url: formData.websiteURL,
+        external_links: formData.externalLinks,
+      }),
+    });
+
+    await response.json();
+    setIsSubmitting(false);
+    window.location.reload();
   };
 
   return (
@@ -238,11 +255,13 @@ const InitialForm = () => {
               <div className="hidden sm:flex items-center gap-2">
                 {stepData.type === "textarea" ? (
                   <>
-                    <CommandIcon className="w-3 h-3" />
+                    <CommandIcon className="w-5 h-5 text-indigo-400" />
                     <span>+ Enter</span>
                   </>
                 ) : (
-                  <span>Press Enter ...</span>
+                  <span>
+                    Press <span className="text-indigo-400">Enter ⏎ </span>
+                  </span>
                 )}
                 <span className="ml-1">to continue</span>
               </div>

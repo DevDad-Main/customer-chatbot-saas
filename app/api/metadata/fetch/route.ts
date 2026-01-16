@@ -1,10 +1,8 @@
-import { db } from "@/db/client";
-import { metadata } from "@/db/schema";
+import { prisma } from "@/db/client";
 import { isUserAuthorized } from "@/lib/isAuthorized";
 import { logger } from "devdad-express-utils";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
-import { eq } from "drizzle-orm";
 import { ResponseCookie } from "next/dist/compiled/@edge-runtime/cookies";
 
 const HTTP_OPTIONS: Partial<ResponseCookie> = {
@@ -39,15 +37,14 @@ export async function GET(req: Request) {
       );
     }
 
-    const [record] = await db
-      .select()
-      .from(metadata)
-      .where(eq(metadata.user_email, user.email));
+    const record = await prisma.metadata.findFirst({
+      where: { userEmail: user.email },
+    });
 
     if (record) {
       cookieStore.set(
         "metadata",
-        JSON.stringify({ business_name: record.business_name }),
+        JSON.stringify({ business_name: record.businessName }),
         HTTP_OPTIONS,
       );
 

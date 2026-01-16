@@ -1,9 +1,7 @@
-import { db } from "@/db/client";
+import { prisma } from "@/db/client";
 import scaleKit from "@/lib/scalekit";
 import { logger } from "devdad-express-utils";
 import { NextRequest, NextResponse } from "next/server";
-import { user as User } from "@/db/schema";
-import { eq } from "drizzle-orm";
 import { ResponseCookie } from "next/dist/compiled/@edge-runtime/cookies";
 
 const HTTP_OPTIONS: Partial<ResponseCookie> = {
@@ -11,7 +9,7 @@ const HTTP_OPTIONS: Partial<ResponseCookie> = {
   secure: process.env.NODE_ENV === "production",
   sameSite: "lax",
   path: "/",
-  maxAge: 60 * 60 * 24 * 1, // 1 day
+  maxAge: 60 * 60 * 24 * 1,
 };
 
 export async function GET(req: NextRequest) {
@@ -68,16 +66,17 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    const existingUser = await db
-      .select()
-      .from(User)
-      .where(eq(User.email, user.email));
+    const existingUser = await prisma.user.findUnique({
+      where: { email: user.email },
+    });
 
-    if (existingUser.length === 0) {
-      await db.insert(User).values({
-        name: user?.name || "anonymous",
-        email: user.email,
-        organization_id: organizationID,
+    if (!existingUser) {
+      await prisma.user.create({
+        data: {
+          name: user?.name || "anonymous",
+          email: user.email,
+          organizationId: organizationID,
+        },
       });
     }
 

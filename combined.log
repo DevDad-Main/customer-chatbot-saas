@@ -33,3 +33,33 @@
 {"level":"info","message":"GET: Auth Called: ","service":"serviq-saas","timestamp":"2026-01-16T10:14:36.743Z"}
 {"URL":"http://localhost:3000/api/auth/callback?code=N6b7n1dE6U93kVKS7UHD_wQY8v7QxXxY40rBrv73N_3qdxuHPj0&state=acc3c7de80e62444e5c73a89af3890f6","body":null,"level":"info","message":"GET: /auth/callback called: ","service":"serviq-saas","timestamp":"2026-01-16T10:14:37.827Z"}
 {"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T10:14:40.274Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T18:35:25.695Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T18:35:30.172Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T18:40:45.438Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:35:05.337Z"}
+{"error":{"clientVersion":"5.22.0","code":"P2022","meta":{"column":"metadata.userEmail","modelName":"Metadata"},"name":"PrismaClientKnownRequestError"},"level":"error","message":"Failed To Fetch MetaData","service":"serviq-saas","timestamp":"2026-01-16T19:35:05.804Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:35:34.065Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:36:27.782Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:36:41.238Z"}
+{"level":"info","message":"GET: Auth Called: ","service":"serviq-saas","timestamp":"2026-01-16T19:36:44.354Z"}
+{"level":"info","message":"GET: Auth Called: ","service":"serviq-saas","timestamp":"2026-01-16T19:36:46.559Z"}
+{"URL":"http://localhost:3000/api/auth/callback?code=QuJ5DM5xprlaZvXmQcpaTliNPkyS3y55DdYI1t6BhLjiD_OsF4c&state=46153a4826b9a1cb3efb051d5b815d53","body":null,"level":"info","message":"GET: /auth/callback called: ","service":"serviq-saas","timestamp":"2026-01-16T19:37:03.972Z"}
+{"error":{"clientVersion":"5.22.0","code":"P2022","meta":{"column":"user.organizationId","modelName":"User"},"name":"PrismaClientKnownRequestError"},"level":"error","message":"GET: /auth/callback error: ","service":"serviq-saas","timestamp":"2026-01-16T19:37:05.353Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:41:41.517Z"}
+{"level":"info","message":"GET: Auth Called: ","service":"serviq-saas","timestamp":"2026-01-16T19:41:44.238Z"}
+{"level":"info","message":"GET: Auth Called: ","service":"serviq-saas","timestamp":"2026-01-16T19:41:46.797Z"}
+{"URL":"http://localhost:3000/api/auth/callback?code=ZwwRJD_qCe9H0ejUIQ0JuQ37rcQs7KdS5v-fQJDEYt-eAXDAKXk&state=0282f5f7b739233a58a94b7071ecb379","body":null,"level":"info","message":"GET: /auth/callback called: ","service":"serviq-saas","timestamp":"2026-01-16T19:41:57.401Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:41:59.237Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:42:18.842Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:42:18.849Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:43:04.787Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:43:05.741Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:47:31.876Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:47:34.161Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:47:36.234Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:47:36.247Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:50:00.204Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:50:00.217Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:52:14.820Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T19:52:28.771Z"}
+{"level":"info","message":"Authorization Func Called:","service":"serviq-saas","timestamp":"2026-01-16T20:10:00.957Z"}
