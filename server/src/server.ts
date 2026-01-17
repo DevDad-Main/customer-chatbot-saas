@@ -5,5 +5,6 @@ const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
   logger.info(`Server is running on: http://localhost:${PORT}`);
-  console.log(`Server running on port ${PORT}`);
+  logger.info(`PostgreSQL is running on: ${process.env.DATABASE_URL}`);
+  // console.log(`Server running on port ${PORT}`);
 });
