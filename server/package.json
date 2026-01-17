@@ -1,0 +1,34 @@
+{
+  "name": "customer-chatbot-server",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "@scalekit-sdk/node": "^2.1.9",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "devdad-express-utils": "^1.8.2",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.0",
+    "zod": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20",
+    "prisma": "^5.22.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5"
+  }
+}

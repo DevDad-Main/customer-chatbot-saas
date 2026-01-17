@@ -1,2 +1,0 @@
-{"error":{"clientVersion":"5.22.0","code":"P2022","meta":{"column":"metadata.userEmail","modelName":"Metadata"},"name":"PrismaClientKnownRequestError"},"level":"error","message":"Failed To Fetch MetaData","service":"serviq-saas","timestamp":"2026-01-16T19:35:05.804Z"}
-{"error":{"clientVersion":"5.22.0","code":"P2022","meta":{"column":"user.organizationId","modelName":"User"},"name":"PrismaClientKnownRequestError"},"level":"error","message":"GET: /auth/callback error: ","service":"serviq-saas","timestamp":"2026-01-16T19:37:05.353Z"}
